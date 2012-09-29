@@ -1,4 +1,16 @@
 Bitter::Application.routes.draw do
+  get "user/signup"
+
+  get "user/login"
+
+  get "user/logout"
+
+  get "user/delete"
+
+  get "user/edit"
+
+  get "user/forgot_password"
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:
