@@ -1,6 +1,8 @@
 class User
   include MongoMapper::Document
 
+  has_many :tweets
+
   key :name, String
   key :email, String
 

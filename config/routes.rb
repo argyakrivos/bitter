@@ -1,4 +1,14 @@
 Bitter::Application.routes.draw do
+  get "tweet" => "tweet#index"
+
+  get "tweet/new"
+
+  post "tweet" => "tweet#create"
+
+  get "tweet/delete"
+
+  match "tweet/:id" => "tweet#show"
+
   get "user/signup"
 
   get "user/login"

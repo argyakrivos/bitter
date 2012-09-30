@@ -1,0 +1,22 @@
+<h1>Listing tweets</h1>
+
+<hr>
+ <%= link_to 'New Tweet', :action => :new %>
+<hr>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Message</th>
+  </tr>
+ 
+  <% @tweets.each do |tweet| %>
+    <tr>
+      <td><%= tweet.user.inspect %></td>
+      <td><%= tweet.message %></td>
+    </tr>
+  <% end %>
+</table>
+
+<hr>
+<%= link_to 'Back', :controller => :home %>
